@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapr.AspNetCore" Version="1.13.1" />
+    <PackageReference Include="Dapr.Client" Version="1.13.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Swag.Access.Data\Swag.Access.Data.csproj" />
+    <ProjectReference Include="..\Swag.Engine.Calculator\Swag.Engine.Calculator.csproj" />
+    <ProjectReference Include="..\Swag.Framework\Swag.Framework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interface\protos\" />
+    <Folder Include="Sidecar\protos\" />
+  </ItemGroup>
+
+</Project>

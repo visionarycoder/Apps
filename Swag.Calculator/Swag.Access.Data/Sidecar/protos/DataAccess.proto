@@ -1,0 +1,74 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Swag.Access.Data.Sidecar.Protos";
+
+package data;
+
+service DataAccess {
+  rpc SaveEstimate (SaveEstimateRequest) returns (SaveEstimateResponse);
+  rpc AddEstimate (AddEstimateRequest) returns (AddEstimateResponse);
+  rpc GetEstimate (GetEstimateRequest) returns (GetEstimateResponse);
+  rpc GetEstimates (GetEstimatesRequest) returns (GetEstimatesResponse);
+  rpc UpdateEstimate (UpdateEstimateRequest) returns (UpdateEstimateResponse);
+}
+
+message SaveEstimateRequest {
+  int32 Id = 1;
+  int32 Optimistic = 2;
+  int32 MostLikely = 3;
+  int32 Pessimistic = 4;
+  decimal Estimate = 5;
+}
+
+message SaveEstimateResponse {
+  int32 Id = 1;
+  int32 Optimistic = 2;
+  int32 MostLikely = 3;
+  int32 Pessimistic = 4;
+  decimal Estimate = 5;
+}
+
+message AddEstimateRequest {
+  int32 Optimistic = 1;
+  int32 MostLikely = 2;
+  int32 Pessimistic = 3;
+  decimal Estimate = 4;
+}
+
+message AddEstimateResponse {
+  int32 Id = 1;
+  int32 Optimistic = 2;
+  int32 MostLikely = 3;
+  int32 Pessimistic = 4;
+  decimal Estimate = 5;
+}
+
+message GetEstimateRequest {
+  int32 Optimistic = 1;
+  int32 MostLikely = 2;
+  int32 Pessimistic = 3;
+}
+
+message GetEstimateResponse {
+  int32 Id = 1;
+  int32 Optimistic = 2;
+  int32 MostLikely = 3;
+  int32 Pessimistic = 4;
+  decimal Estimate = 5;
+}
+
+message UpdateEstimateRequest {
+  int32 Id = 1;
+  int32 Optimistic = 2;
+  int32 MostLikely = 3;
+  int32 Pessimistic = 4;
+  decimal Estimate = 5;
+}
+
+message UpdateEstimateResponse {
+  int32 Id = 1;
+  int32 Optimistic = 2;
+  int32 MostLikely = 3;
+  int32 Pessimistic = 4;
+  decimal Estimate = 5;
+}
